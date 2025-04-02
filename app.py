@@ -42,7 +42,7 @@ uploaded_file = st.file_uploader("Upload an MRI image",  type = ['jpg','png', 'j
 
 if uploaded_file:
     image = Image.open(uploaded_file)
-    st.image(image,caption="Uploaded Image",use_column_width= True)
+    st.image(image,caption="Uploaded Image",width = 300)
     processed_image = preprocessing_image(image)
     prediction = model.predict(processed_image)[0][0]
 
