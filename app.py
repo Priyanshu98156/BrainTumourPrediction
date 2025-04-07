@@ -4,20 +4,9 @@ from PIL import Image
 import numpy as np
 import cv2
 import time
+from io import BytesIO
+import base64
 
-# === Dark Mode Toggle ===
-dark_mode = st.checkbox("🌙 Dark Mode")
-if dark_mode:
-    st.markdown("""
-        <style>
-        body {
-            background-color: #121212;
-            color: #FFFFFF;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-
-# === MedVision Header ===
 st.markdown("""
     <h1 style='text-align: center; color: #4CAF50; font-size: 60px;'>
         MedVision
@@ -55,7 +44,25 @@ uploaded_file = st.file_uploader("Upload an MRI image", type=['jpg', 'png', 'jpe
 
 if uploaded_file and model:
     image = Image.open(uploaded_file)
-    st.image(image, caption="Uploaded Image", width=300)
+    # st.image(image, caption="Uploaded Image", width=300)
+    # Convert the uploaded image to base64
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+    buffered = BytesIO()
+    image.save(buffered, format="PNG")
+    img_bytes = buffered.getvalue()
+    encoded = base64.b64encode(img_bytes).decode()
+
+    st.markdown(
+    f"""
+    <div style="text-align: center;">
+        <img src="data:image/png;base64,{encoded}" width="200"/>
+        <p style="color: white;">Uploaded Image</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+    )
+
     processed_image = preprocessing_image(image)
 
     with st.spinner("🔍 Analyzing MRI..."):
@@ -70,6 +77,6 @@ if uploaded_file and model:
         st.success("✅ No Tumor Detected")
 
     # === Confidence Progress Bar ===
-    st.write(f"Prediction Confidence: {prediction:.2f}")
-    st.progress(int(prediction * 100))
+    # st.write(f"Prediction Confidence: {prediction:.2f}")
+    # st.progress(int(prediction * 100))
     # st.write(f"Confidence: {prediction:.2f}")
