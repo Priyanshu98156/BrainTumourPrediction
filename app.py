@@ -141,13 +141,21 @@ if selected == "Home":
 
         st.markdown(
             f"""
-            <div style="text-align: center;">
-                <img src="data:image/png;base64,{encoded}" width="200"/>
-                <p style="color: white;">Uploaded Image</p>
+            <div style="text-align: center; margin-top: -40px;">
+                <img src="data:image/png;base64,{encoded}" 
+                    style="width: 200px; 
+                            border-radius: 20px; 
+                            border: 0px solid #ffffff;
+                            transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='scale(1.05)'"
+                    onmouseout="this.style.transform='scale(1)'"
+                />
+                <p style="color: white; margin-top: 10px;">📷 Uploaded Image</p>
             </div>
             """,
             unsafe_allow_html=True
         )
+
 
         processed_image = preprocessing_image(image)
 
