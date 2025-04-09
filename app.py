@@ -249,7 +249,7 @@ elif selected == "How This Works":
 
     Powered by **TensorFlow, OpenCV, and Streamlit**.
     """)
-    st.image("https://miro.medium.com/v2/resize:fit:1200/format:webp/1*MaP1B-8W7H8yETrg94Q_Wg.png", use_column_width=True)
+    st.image("https://github.com/Priyanshu98156/MedVision/raw/main/work-schedule.png", width= 200)
 
 # --- ABOUT US PAGE ---
 elif selected == "About Us":
