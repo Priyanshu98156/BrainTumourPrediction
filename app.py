@@ -257,10 +257,10 @@ elif selected == "About Us":
     st.markdown("""
     **MedVision** is a student-driven AI project aimed at helping radiologists and medical professionals.
 
-    - 👨‍💻 Developer: Priyanshu  
+    - 👨‍💻 Developer: Anshika,Vanshika,Priyanshu Gupta
     - 🧪 Focus: AI in Healthcare  
     - 💻 Tools Used: Python, TensorFlow, OpenCV, Streamlit  
     - 🌟 Goal: Assist in fast, reliable tumor screening  
-    - 📬 Contact: your.email@example.com  
+    - 📬 Contact: p.gupta98156@gmail.com  
     """)
     st.image("https://cdn-icons-png.flaticon.com/512/4712/4712109.png", width=150)
