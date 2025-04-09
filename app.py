@@ -45,7 +45,7 @@ st.markdown(
     </style>
 
     <video id="bgVideo" autoplay muted loop class="video-bg">
-        <source src="https://github.com/Priyanshu98156/videos/raw/main/nodes.mp4" type="video/mp4">
+        <source src="https://github.com/Priyanshu98156/MedVision/raw/main/dna.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
@@ -230,7 +230,7 @@ elif selected == "Guide":
 
     This tool is designed for early detection and quick screening.
     """)
-    st.image("https://github.com/Priyanshu98156/images/raw/main/lotus.png", width=200)
+    st.image("https://github.com/Priyanshu98156/MedVision/raw/main/dna.mp4", width=200)
 
 # --- HOW THIS WORKS PAGE ---
 elif selected == "How This Works":
