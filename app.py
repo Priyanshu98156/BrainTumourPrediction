@@ -220,47 +220,125 @@ if selected == "Home":
 
 # --- GUIDE PAGE ---
 elif selected == "Guide":
-    st.title("📘 User Guide")
     st.markdown("""
-    #### Here's how to use MedVision:
-    - **Step 1:** Go to the Home page  
-    - **Step 2:** Upload a clear MRI scan (.jpg, .jpeg, .png)  
-    - **Step 3:** Wait while the model processes it  
-    - **Step 4:** See results and check for tumor detection  
+    <style>
+    .full-dark-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 0;
+    }
+    .content-box {
+        position: relative;
+        z-index: 1;
+        padding: 30px;
+        border-radius: 15px;
+        margin-top: -100px;
+    }
+    </style>
 
-    This tool is designed for early detection and quick screening.
-    """)
+    <div class="full-dark-overlay"></div>
+
+    <div class="content-box">
+        <h1 style="color: #1cfff2; font-size: 32px;">📘 User Guide</h1>
+        <p style="color: white; font-size: 17px; line-height: 1.6;">
+            <b>Here's how to use MedVision:</b><br><br>
+            <b>➊ Step 1:</b> Go to the Home page<br>
+            <b>➋ Step 2:</b> Upload a clear MRI scan (.jpg, .jpeg, .png)<br>
+            <b>➌ Step 3:</b> Wait while the model processes it<br>
+            <b>➍ Step 4:</b> See results and check for tumor detection<br><br>
+            🧠 This tool is designed for early detection and quick screening.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
     st.image("https://github.com/Priyanshu98156/MedVision/raw/main/lotus.png", width=200)
+
 
 # --- HOW THIS WORKS PAGE ---
 elif selected == "How This Works":
-    st.title("⚙️ How This Works")
     st.markdown("""
-    This app uses a **Convolutional Neural Network (CNN)** trained on thousands of MRI brain scans.
+        <style>
+        .full-dark-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 0;
+        }
+        .content-box {
+            position: relative;
+            z-index: 1;
+            padding: 30px;
+            border-radius: 18px;
+            margin-top: -100px;
+           
+        }
+        </style>
 
-    **Workflow:**
-    - Convert image to grayscale
-    - Resize to 128x128
-    - Normalize pixel values
-    - Predict using a trained TensorFlow model
+        <div class="full-dark-overlay"></div>
 
-    If prediction > 0.5 → **Tumor Detected**  
-    Else → **No Tumor**
-
-    Powered by **TensorFlow, OpenCV, and Streamlit**.
-    """)
-    st.image("https://github.com/Priyanshu98156/MedVision/raw/main/work-schedule.png", width= 200)
+        <div class="content-box">
+            <h1 style="color: #1cfff2; font-size: 36px; text-align: center;">⚙️ How This Works</h1>
+            <p style="color: white; font-size: 18px; line-height: 1.8; text-align: justify;">
+                <b>This app uses a <span style="color:#1cfff2;">Convolutional Neural Network (CNN)</span> trained on thousands of MRI brain scans to predict the presence of a brain tumor.</b><br><br>
+                🧠 <b>Workflow:</b><br>
+                <ul style="color: white; font-size: 17px;">
+                    <li>🖼️ Convert image to grayscale</li>
+                    <li>📏 Resize to <b>128x128</b> pixels</li>
+                    <li>🎯 Normalize pixel values</li>
+                    <li>🧪 Predict using a trained <b>TensorFlow</b> model</li>
+                </ul><br>
+                🔍 <b>Prediction Logic:</b><br><br>
+                <span style="color: #1cfff2;">If prediction &gt; 0.5 → <b>Tumor Detected</b></span><br>
+                <span style="color: lightgreen;">Else → <b>No Tumor</b></span><br><br>
+                ⚡ Powered by <b>TensorFlow</b>, <b>OpenCV</b>, and <b>Streamlit</b>.
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
+    st.image("https://github.com/Priyanshu98156/MedVision/raw/main/work-schedule.png", width=200)
 
 # --- ABOUT US PAGE ---
 elif selected == "About Us":
-    st.title("👤 About Us")
     st.markdown("""
-    **MedVision** is a student-driven AI project aimed at helping radiologists and medical professionals.
+    <style>
+    .full-dark-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 0;
+    }
+    .content-box {
+        position: relative;
+        z-index: 1;
+        padding: 40px;
+        border-radius: 18px;
+        margin-top: -100px;
+        
+    }
+    </style>
 
-    - 👨‍💻 Developer: Anshika,Vanshika,Priyanshu Gupta
-    - 🧪 Focus: AI in Healthcare  
-    - 💻 Tools Used: Python, TensorFlow, OpenCV, Streamlit  
-    - 🌟 Goal: Assist in fast, reliable tumor screening  
-    - 📬 Contact: p.gupta98156@gmail.com  
-    """)
-    st.image("https://cdn-icons-png.flaticon.com/512/4712/4712109.png", width=150)
+    <div class="full-dark-overlay"></div>
+
+    <div class="content-box">
+        <h1 style="color: #1cfff2; font-size: 36px; text-align: center;">👤 About Us</h1>
+        <p style="color: white; font-size: 18px; line-height: 1.8; text-align: justify;">
+            <b>MedVision</b> is a student-driven AI initiative developed with the aim of supporting radiologists and healthcare professionals in detecting brain tumors faster and more reliably.<br><br>
+            👨‍💻 <b>Developers:</b> Anshika, Vanshika, Priyanshu Gupta<br>
+            🧪 <b>Focus:</b> Artificial Intelligence in Healthcare<br>
+            💻 <b>Tech Stack:</b> Python, TensorFlow, OpenCV, Streamlit<br>
+            🌟 <b>Goal:</b> Fast and dependable tumor screening<br>
+            📬 <b>Contact:</b> <a href="mailto:p.gupta98156@gmail.com" style="color: #1cfff2;">p.gupta98156@gmail.com</a>
+        </p>
+    </div>
+""", unsafe_allow_html=True)
+
+st.image("https://cdn-icons-png.flaticon.com/512/4712/4712109.png", width=150)
