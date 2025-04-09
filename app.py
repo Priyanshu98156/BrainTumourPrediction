@@ -340,5 +340,4 @@ elif selected == "About Us":
         </p>
     </div>
 """, unsafe_allow_html=True)
-
-st.image("https://cdn-icons-png.flaticon.com/512/4712/4712109.png", width=150)
+    st.image("https://cdn-icons-png.flaticon.com/512/4712/4712109.png", width=150)
