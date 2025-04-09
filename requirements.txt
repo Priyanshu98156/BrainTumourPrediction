@@ -1,7 +1,7 @@
 streamlit
 streamlit-option-menu
-tensorflow==2.10.0
-keras==2.10.0
+tensorflow==2.16.1
+keras==2.16.0
 numpy
 pandas
 matplotlib
