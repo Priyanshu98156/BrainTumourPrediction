@@ -8,3 +8,8 @@ seaborn
 scikit-learn
 opencv-python
 pillow
+icrawler
+
+
+
+

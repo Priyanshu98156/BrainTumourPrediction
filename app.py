@@ -93,7 +93,7 @@ st.markdown("""
 @st.cache_resource
 def load_model():
     try:
-        return tf.keras.models.load_model("brain_tumor_model.h5")
+        return tf.keras.models.load_model("bestmodel.h5")
     except Exception as e:
         st.error(f"Error loading model: {e}")
         return None
