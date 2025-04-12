@@ -24,19 +24,25 @@ MedVision is a web-based tool that uses a Convolutional Neural Network (CNN) mod
 
 ---
 
-
 ## 🖥️ Installation (Local)
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/MedVision.git
 cd MedVision
 ```
+
 Install Dependecies
-``` bash
+
+```bash
 pip install -r requirements.txt
 ```
+
 Run the streamlit app
+
 ```bash
 streamlit run app.py
 ```
+
+i used icrawler to get random images for mri classifier
