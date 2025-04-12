@@ -38,6 +38,7 @@ st.markdown(
         animation: fadeIn 1.5s ease-in-out;
     }
 
+
     @keyframes fadeIn {
         from {opacity: 0;}
         to {opacity: 1;}
@@ -168,15 +169,7 @@ if selected == "Home":
         img_bytes = buffered.getvalue()
         encoded = base64.b64encode(img_bytes).decode()
 
-
-        processed_image = preprocessing_image(image)
-        prediction = mriClassifier.predict(processed_image)
-
-        if prediction > 0.5:
-            st.markdown("""<div class="result-box">⚠️ Invalid or Unrecognized MRI Format</div>""", unsafe_allow_html=True)
-
-        else:
-            st.markdown(
+        st.markdown(
             f"""
             <div style="text-align: center; margin-top: -40px;">
                 <img src="data:image/png;base64,{encoded}" 
@@ -192,6 +185,15 @@ if selected == "Home":
             """,
             unsafe_allow_html=True
             )
+
+        processed_image = preprocessing_image(image)
+        prediction = mriClassifier.predict(processed_image)
+
+        if prediction > 0.5:
+            st.markdown("""<div class="result-box">⚠️ Invalid or Unrecognized MRI Format</div>""", unsafe_allow_html=True)
+
+        else:
+            
             with st.spinner("🔍 Analyzing MRI..."):
                 time.sleep(3)
                 prediction = model.predict(processed_image)[0][0]
