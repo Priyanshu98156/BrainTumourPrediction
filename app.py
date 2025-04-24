@@ -9,6 +9,13 @@ import base64
 from streamlit_option_menu import option_menu
 
 # === Background Video Styling ===
+
+st.set_page_config(
+    page_title="MedVision",
+    page_icon="🧠",  # Brain emoji
+    layout="wide"    # Optional layout setting
+)
+
 st.markdown(
     """
     <style>
