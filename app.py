@@ -414,7 +414,7 @@ elif selected == "About Us":
         <h1 style="color: #1cfff2; font-size: 36px; text-align: center;">👤 About Us</h1>
         <p style="color: white; font-size: 18px; line-height: 1.8; text-align: justify;">
             <b>MedVision</b> is a student-driven AI initiative developed with the aim of supporting radiologists and healthcare professionals in detecting brain tumors faster and more reliably.<br><br>
-           🧪 <b>Focus:</b> Artificial Intelligence in Healthcare<br>
+            🧪 <b>Focus:</b> Artificial Intelligence in Healthcare<br>
             💻 <b>Tech Stack:</b> Python, TensorFlow, OpenCV, Streamlit<br>
             🌟 <b>Goal:</b> Fast and dependable tumor screening<br>
             📬 <b>Contact:</b> <a href="mailto:p.gupta98156@gmail.com" style="color: #1cfff2;">p.gupta98156@gmail.com</a>
